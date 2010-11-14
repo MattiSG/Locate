@@ -51,19 +51,19 @@ To get the distance from the current position to another, use the function `dist
 Position data
 -------------
 
-The position data given with the event 'locate' looks like this:
+The `position` object passed along the `locate` event contains the following members:
 
-* position.latitude
-* position.longitude
-* position.altitude
+* `position.latitude`
+* `position.longitude`
+* `position.altitude`
   - meters above the WGS84 ellipsoid, or `null` if not supported
-* position.accuracy
+* `position.accuracy`
   - specified in meters
-* position.altitudeAccuracy
+* `position.altitudeAccuracy`
   - specified in meters
-* position.heading
+* `position.heading`
   - specified in degrees counting clockwise to true north, or `null` if not supported
-* position.speed
+* `position.speed`
   - specified in meters per second, or `null` if not supported
 
 If Locate.Extras is included, you can easily get the following:
@@ -71,7 +71,7 @@ If Locate.Extras is included, you can easily get the following:
 * headed cardinal direction
 	- use position.heading.cardinalDirection()
 	- returns the heading direction as string (cardinal direction): "N", "NE", "E"…
-* position.address
+* `position.address`
 	- returns your current address based on GMaps
 	- If you want to use this feature, use this.address() within the onLocate function
 	- You have to use the watcher method atm, working on a fix
@@ -80,6 +80,7 @@ Locate.Extras
 =============
 
 Provides:
+
 * `Number.cardinalDirection()`
 	- considering this number as a heading (in degrees), returns a String like "N", "SW"… describing the pointed direction.
 * `Number.toRadians()`
