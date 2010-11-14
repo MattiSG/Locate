@@ -37,7 +37,7 @@ Want to frequently get the position (observe your visitor move)?
 		}
 	}).observe();
 
-Locating is deactivated by default, since this would display a request to the user to share its location, possibly through a modal (Safari 5), which is aggressive behaviour and lowers your chances of the user accepting to share its location.
+Locating is deactivated by default, since this would display a request to the user to share its location, possibly through a modal (Safari 5), which is aggressive behaviour and lowers your chances of getting him to accept sharing his location.
 However, if you want to locate your user immediately on instantiation, simply call `locate()` right after init :
 
 	var myLocator = new Locate().locate();
