@@ -2,7 +2,7 @@
 ---
 
 script: Locate.Extras.js
-version: 1.3
+version: 1.4 {MSG}
 description: With the Locate.Extras class you can do more things like calculating the distance to another position or get the address for the current position
 license: MIT-style
 authors:
@@ -43,7 +43,7 @@ Locate.implement({
 	/**Returns the distance (in kilometers) from the given (lat, long) couple to the latest recorded user position.
 	*Uses the harvesine formula, as described in http://www.movable-type.co.uk/scripts/latlong.html .
 	*/
-	distanceTo: function(dlat, dlong){
+	distanceTo: function(dlat, dlong) {
 		if (! this.position)
 			return null;
 	
@@ -58,7 +58,7 @@ Locate.implement({
 		return earthRadius * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 	},
 	
-	address: function(){
+	address: function() {
 		// This function requires an initialized GMaps (Google Maps)
 		if (! this.geocoder)
 			this.geocoder = new GClientGeocoder();
